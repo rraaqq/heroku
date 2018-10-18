@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title="Aplikacja"
+    body
+        include ./header.pug
+        form(action='/userform')
+            p
+                | First Name: 
+                input(type='text', name='first_name')
+            p
+                | Last Name: 
+                input(type='text', name='last_name')
+            input(type='submit', value='Submit')
