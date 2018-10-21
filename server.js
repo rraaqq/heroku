@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var port = process.env.PORT || 8080;
 
 app.set('view engine', 'pug');
 app.set('views','./views');
@@ -20,10 +21,7 @@ app.get('/userform', function (req, res) {
 });
 
 
-
-
-
-app.listen(8080);
+app.listen(port);
 app.use(function (req, res, next) {
     res.status(404).send('Wybacz, nie mogliśmy odnaleźć tego, czego żądasz!')
 });
